@@ -1,40 +1,53 @@
 
 # Minimal CubeSat EPS Circuit Simulation-RathnamS245805102
 
-This repository contains a circuit model of a minimal Electrical Power Subsystem (EPS) for a CubeSat, developed for the Power Challenge. The model simulates the charge and discharge behavior of the satellite's battery over a simplified orbital period. This demonstrates the main functions of a satellite power system.
+My Minimal CubeSat EPS Circuit Simulation
+This repository holds my submission for the Power Challenge: a circuit model of a minimal Electrical Power Subsystem (EPS) for a CubeSat. My goal with this project was to simulate the charge and discharge cycle of a satellite's battery over a simplified orbit, showing how a real satellite manages its power.
 
-Approach
-The primary goal was to model a 90-minute orbit, which includes a 60-minute sun period and a 30-minute eclipse, using the browser-based tool CircuitJS1.
+My Approach
+The core of the challenge was to model a 90-minute orbit with a 60-minute sun period and a 30-minute eclipse, all within the browser-based tool CircuitJS1.
 
-The initial plan was to use the simulator's built-in timed components, such as a Piecewise Linear (PWL) source for the solar array and timed switches for the loads. However, it was found that the available version of the simulator did not include these specific components.
+My initial plan was to use the simulator's standard timed components, like a Piecewise Linear (PWL) source for the solar panels and timed switches for the different loads. However, I quickly ran into a major technical hurdle: the version of the simulator I was using didn't have these components.
 
-To address this significant technical challenge, a new method was developed based on basic electronic principles:
-1. Analog Timers: Custom, slow-acting analog timers were designed and built using Resistor-Capacitor (RC) circuits. A very slow timer (4MΩ resistor, 980µF capacitor) was created to simulate the ~60-minute sunrise event. A second, faster RC timer was built to simulate the "short burst" load.
-2. MOSFET Switches: N-Channel MOSFETs served as efficient electronic switches. The gates of these MOSFETs were controlled by the custom RC timers or by a constant DC voltage. This allowed the loads to be turned on and off with the necessary timing profiles.
-3. Controlled Solar Source: A Voltage-Controlled Current Source (VCCS) was used to model the solar array as a supply. Its output was controlled by the main "sunrise" RC timer, causing it to activate and provide power after the simulated eclipse period.
+Instead of giving up, I decided to build the necessary functions from scratch using fundamental electronic principles. This meant I had to:
 
-This workaround, while more complex, successfully models the needed charge/discharge behavior and shows a deeper understanding of how timed events can be created from basic electronic components.
+Build my own Analog Timers: I designed and built custom timers using Resistor-Capacitor (RC) circuits. I made a very slow timer (with a 4MΩ resistor and a 980µF capacitor) to simulate the ~60-minute sunrise and a much faster one for the "short burst" load.
 
- Assumptions
+Use MOSFETs as Switches: I used N-Channel MOSFETs to act as efficient switches for the loads. I then used my custom RC timers and a simple DC voltage to control the gates, which let me turn the loads on and off with the specific timing profiles the project required.
 
-* The battery is modeled as an ideal 7.4V source in series with a 0.1Ω resistor to simulate internal resistance and voltage drop.
-* Available solar power in the sun is about 6W at the EPS input.
-* The three distinct loads are modeled with the following approximate power consumptions:
-    * OBC ("Always On"): ~0.5W (110Ω resistor)
-    * Payload ("Sun-Only"): ~2W (27Ω resistor)
-    * TT&C ("Short Burst"): ~4W (14Ω resistor)
-* Overall EPS conversion and wiring losses are represented by a single 0.2Ω series resistor.
+Create a Controlled Solar Source: I used a Voltage-Controlled Current Source (VCCS) to act as the solar array. I connected its control input to my main "sunrise" timer, allowing it to turn on and provide power after the simulated eclipse.
 
- Tools Used
+While this approach was definitely more complex, it was a great challenge that resulted in a successful model. It also demonstrates a deeper understanding of how these systems can be built from the ground up.
 
-* Simulation: CircuitJS1 (Browser-based SPICE tool) 
-* Version Control:** Git & GitHub 
+Key Assumptions
+The battery is modeled as an ideal 7.4V source with a 0.1Ω series resistor to show how the voltage might realistically drop under heavy use.
 
- Instructions to Run
+I assumed the solar panels provide about 6W of power when in the sun.
 
-1.  Navigate to the `src/` directory and open the circuit text file.
-2.  Copy the entire contents of the file.
-3.  Go to the [CircuitJS1 website](https://www.falstad.com/circuit/circuitjs.html).
-4.  Click `File` > `Import From Text...`.
-5.  Paste the copied text into the window and click "OK". The complete circuit will load.
-6.  To run the simulation and see the required waveforms, follow the analysis steps outlined in the `RESULTS.md` file.
+I modeled three distinct loads with power estimates based on their function:
+
+OBC ("Always On"): ~0.5W (110Ω resistor)
+
+Payload ("Sun-Only"): ~2W (27Ω resistor)
+
+TT&C ("Short Burst"): ~4W (14Ω resistor)
+
+I included a single 0.2Ω series resistor to represent overall power conversion and wiring losses in the system.
+
+Tools I Used
+Simulation: CircuitJS1 (Browser-based SPICE tool)
+
+Version Control: Git & GitHub
+
+Instructions to Run My Simulation
+Navigate to the src/ directory and open the circuit text file.
+
+Copy the entire block of text.
+
+Go to the CircuitJS1 website.
+
+Click File > Import From Text....
+
+Paste the text into the window and click "OK". The complete circuit should load.
+
+To see the results and my analysis, please check out the RESULTS.md file.
