@@ -11,7 +11,7 @@ Prompts and Query Themes
 
 My interaction with the AI was a continuous dialogue rather than a set of isolated questions. My prompts targeted several key areas throughout the project:
 
-Initial Strategy and Scoping: I began with high-level prompts to break down the problem statement and create a clear plan, asking things like "What approach should I take for this problem?" and "Go through the files and update my readme.md."
+Initial Strategy and Scoping: I began with high-level prompts to break down the problem statement and create a clear plan, asking things like "What approach should I take for this problem?" and "Go through the files and update my circuit."
 
 Step-by-Step Implementation: The heart of the circuit construction was guided by sequential prompts, such as "How do I visualize the circuit?" or "How do I create power and ground buses?"
 
@@ -58,5 +58,6 @@ RC Circuits: All About Circuits - RC Circuit Analysis - Used to verify the princ
 MOSFETs as Switches: SparkFun - Transistors - Used for a practical overview of how MOSFETs function as switches.
 
 Git and GitHub: GitHub Skills - Used to better understand the Git workflow and commands suggested by the AI.
+
 
 
