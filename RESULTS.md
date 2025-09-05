@@ -1,6 +1,4 @@
 
-### **`RESULTS.md` 
-
 # Project Results: A CubeSat's Day in Orbit
 
 I'm excited to present the results from my simulation of a CubeSat's Electrical Power Subsystem (EPS). After designing the circuit and overcoming some interesting challenges with the software's limitations, I was able to successfully model the critical charge/discharge cycle that a real satellite experiences on every orbit.
@@ -19,7 +17,7 @@ Here’s what each line in the graph represents:
 
 ## Decoding the Model: Element-to-Function Mapping
 
-To understand my circuit diagram, here’s a quick guide that maps each part of my model to its real-world function on an actual CubeSat. [cite_start]This was a key part of the challenge: demonstrating what each block means[cite: 111, 112].
+To understand my circuit diagram, here’s a quick guide that maps each part of my model to its real-world function on an actual CubeSat. This was a key part of the challenge: demonstrating what each block means.
 
 | My Circuit Component | Real-World EPS Function |
 | :--- | :--- |
