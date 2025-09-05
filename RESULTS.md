@@ -1,19 +1,19 @@
-# Project Results: A CubeSat's Day in Orbit
+ Project Results: A CubeSat's Day in Orbit
 
 I'm excited to share the results from my simulation of a CubeSat's Electrical Power Subsystem (EPS). After designing the circuit and tackling some challenges with the software's limitations, I successfully modeled the important charge/discharge cycle that a real satellite goes through during each orbit.
 
-## The Heartbeat of the Battery: Key Waveforms
+The Heartbeat of the Battery: Key Waveforms
 
 The waveform below is the main result of this project. It captures the "heartbeat" of the battery over a simulated orbit, showing how it responds to sunlight and darkness.
 
-`![EPS Waveforms](./figures/waveforms.png)`
+`![EPS Waveforms](./figures/waveforms1.png/waveforms2.png)`
 
 Here’s what each line in the graph represents:
-* **Green Line:** The **Battery Voltage ($V_{batt}$)**. It stays steady around the 7.4V mark, which is ideal for a stable power supply.
-* **Yellow Line:** The **Battery Current ($I_{batt}$)**. This tells the main story. A negative current means the battery is draining, while a positive current means it is charging.
-* **White Line (if enabled):** This is our **State of Charge (SOC) Proxy**, visually indicating how the battery's energy level rises and falls.
+Green Line: The Battery Voltage ($V_{batt}$). It stays steady around the 7.4V mark, which is ideal for a stable power supply.
+Yellow Line: The Battery Current. This tells the main story. A negative current means the battery is draining, while a positive current means it is charging.
+White Line (if enabled): This is our State of Charge (SOC) Proxy, visually indicating how the battery's energy level rises and falls.
 
-## Decoding the Model: Element-to-Function Mapping
+Decoding the Model: Element-to-Function Mapping
 
 To understand my circuit diagram, here’s a quick guide that links each part of my model to its real-world function on an actual CubeSat. This was a key part of the challenge: explaining what each block means.
 
@@ -25,7 +25,7 @@ To understand my circuit diagram, here’s a quick guide that links each part of
 | 27Ω Resistor + MOSFET (controlled by Main Timer)| A "Sun-Only" Payload, such as a camera or science instrument, that we only activate when there’s enough solar power. |
 | 14Ω Resistor + MOSFET (controlled by Fast Timer)| The "Short Burst" TT&C Radio. This simulates the high-power transmitter operating briefly to send data back to Earth. |
 
-## The Story in the Data: Explanation of Observed Behavior
+ The Story in the Data: Explanation of Observed Behavior
 
 The simulation illustrates the power system's story, showing how the CubeSat manages its energy to navigate through sunlight and shadow.
 
