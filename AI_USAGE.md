@@ -1,5 +1,5 @@
 
-**AI Usage Report and Project Methodology
+AI Usage Report and Project Methodology
 
 This document explains how I used AI tools to complete the Minimal EPS Circuit Challenge, following the submission guidelines. It includes the types of prompts I used, how I adjusted the AI's output, and a technical summary of the challenges we faced together.
 
@@ -20,8 +20,6 @@ Live Debugging: A significant part of our interaction involved me uploading scre
 Conceptual Clarification: I asked the AI to clarify specific electronic concepts related to my circuit, such as "What is the threshold voltage for minimum power?" and "What's the difference between the PWL function and a normal VCCS source?"
 
 Git/GitHub Workflow: I requested specific command-line instructions to set up my repository and fix a series of authentication and push errors.
-
-Documentation: I prompted the AI to create and refine content for the final report files, including the README.md and RESULTS.md.
 
 How AI Outputs Were Adapted
 
@@ -60,4 +58,5 @@ RC Circuits: All About Circuits - RC Circuit Analysis - Used to verify the princ
 MOSFETs as Switches: SparkFun - Transistors - Used for a practical overview of how MOSFETs function as switches.
 
 Git and GitHub: GitHub Skills - Used to better understand the Git workflow and commands suggested by the AI.
+
 
