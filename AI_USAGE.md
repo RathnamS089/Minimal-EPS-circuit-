@@ -1,6 +1,4 @@
 
-### **`AI_USAGE.md`**
-
 # AI Usage Report and Project Methodology
 
 [cite\_start]This document details my use of AI tools in completing the Minimal EPS Circuit Challenge, as required by the submission guidelines[cite: 122]. It covers the nature of my prompts, how I adapted the AI's output, and a technical summary of the challenges we addressed together.
@@ -50,4 +48,5 @@ Throughout the project, I supplemented the AI's guidance with my own research to
   * **RC Circuits:** [All About Circuits - RC Circuit Analysis](https://www.google.com/search?q=https://www.allaboutcircuits.com/textbook/direct-current/chpt-10/resistor-capacitor-rc-circuits/) - Used to verify the principles behind the analog timers we designed.
   * **MOSFETs as Switches:** [SparkFun - Transistors](https://learn.sparkfun.com/tutorials/transistors/applications-i-switches) - Used for a practical overview of how MOSFETs function as switches.
   * **Git and GitHub:** [GitHub Skills](https://skills.github.com/) - Used to better understand the Git workflow and commands suggested by the AI.
+
 
